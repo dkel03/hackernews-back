@@ -1,13 +1,16 @@
-import { links, getLink, postLink, fetchLink, delLink } from "./db";
 const resolvers = {
   Query: {
-    feed: () => links,
-    link: (_, args) => getLink(args),
+    feed: (root, args, context, info) => {
+      return context.prisma.links()
+    }
   },
   Mutation: {
-    createLink: (_, args) => postLink(args),
-    updateLink: (_, args) => fetchLink(args),
-    deleteLink: (_, args) => delLink(args)
+    post: (root, args, context) => {       // 수정
+      return context.prisma.createLink({   // 수정
+        url: args.url,                     // 수정
+        description: args.description,     // 수정
+      })                                   // 수정
+    }
   },
 };
 

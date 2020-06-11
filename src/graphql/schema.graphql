@@ -4,6 +4,7 @@
   }
 
   type Mutation {
+    post(url: String, description: String!): Link!
     createLink(url: String, description: String!): Link!
     # 링크 갱신하기
     updateLink(id: ID!, url: String, description: String): Link
