@@ -1,0 +1,18 @@
+  type Query {
+    feed: [Link!]!
+    link(id: ID!): Link
+  }
+
+  type Mutation {
+    createLink(url: String, description: String!): Link!
+    # 링크 갱신하기
+    updateLink(id: ID!, url: String, description: String): Link
+    # 링크 삭제하기
+    deleteLink(id: ID!): Link
+  }
+
+  type Link {
+    id: ID!
+    description: String!
+    url: String!
+  }
