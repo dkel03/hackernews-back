@@ -4,17 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "babel-node": "0.0.1-security",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
     "bcryptjs": "^2.4.3",
     "graphql-yoga": "^1.18.3",
     "jsonwebtoken": "^8.5.1",
     "prisma-client-lib": "^1.34.10"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-3": "^6.24.1"
   },
   "scripts": {
     "start": "babel-node src/index.js",
