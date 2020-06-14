@@ -1,3 +1,5 @@
+  scalar DateTime
+  
   type Query {
     link(id: ID!): Link
     feed(filter: String, skip: Int, first: Int, orderBy: LinkOrderByInput): Feed!
